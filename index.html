@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-3</title>
+</head>
+<body>
+<form action="" style="text-align: center;">
+    <h1 style="color: red;">Welcome to Random-Numbers Generator!</h1>
+    <p>Choose how many random numbers you want to generate between 1 to 10</p>
+    <input type="number" name="count" id="count" min="1" max="10"><br>
+    <button type="button" id="generateButton" style="margin-top: 15px; width: 80px; height:40px; background-color:blue; color: greenyellow;">Generate</button>
+    <h3>Here are random numbers for you!</h3>
+    <h2 id="header"></h2>
+</form>    
+ <script>
+
+    let button=document.querySelector('input[type="number"]');
+    let x;
+    document.getElementById("generateButton").onclick = function(){
+            for(let i=0; i<button.value; i++){
+                x = Math.floor(Math.random()*100)+1;
+                document.getElementById("header").innerHTML = x;
+            }
+            
+    }
+ </script>
+</body>
+</html>
